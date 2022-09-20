@@ -5,7 +5,7 @@ const App = (props: any) => {
   return (
     <div className="App">
       <h1>Melhor Idade - IFRN CNAT</h1>
-      <p>Em construção...</p>
+      <p>Em construção v2...</p>
     </div>
   )
 };
