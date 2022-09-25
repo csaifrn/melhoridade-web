@@ -1,0 +1,16 @@
+header{
+    background-color: var(--header-color);
+    height: 100px;
+    width: 100%;
+    margin-bottom: 20px;   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header div{
+    max-width: 80px;
+    max-height: 80px;
+}
+header img{
+    margin: 20px;
+}
