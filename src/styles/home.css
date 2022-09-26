@@ -5,6 +5,8 @@ main{
     width: 374px;
 }
 
+/* ------------------------------ */
+
 .container-pesquisa{
     display: flex;
     align-items: center;
@@ -38,8 +40,6 @@ main{
     box-sizing: border-box;
 }
 
-/* ------------------------------ */
-
 .menu-atv ol{
     display: flex;
     align-items: center;
@@ -70,15 +70,12 @@ main{
     gap: 10px;
 }
 
-/* ------------------------------ */
-
 .container-atv ul{
     display: grid;
     column-gap: 10%;
     padding: 0 5%;
     grid-template-columns: auto auto;
 }
-
 .container-atv li{
     display: flex;
     flex-direction: column;
@@ -99,12 +96,4 @@ main{
 .container-atv p{
     max-width: 80px;
     text-align: center;
-}
-
-/* ------------------------------ */
-
-@media (max-width: 414px) {
-    main{
-        width: 90%;
-    }
 }
