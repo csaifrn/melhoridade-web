@@ -3,13 +3,13 @@ import './styles/global.css';
 import './styles/header.css';
 import './styles/home.css';
 import { Header } from './components/Header';
-import { Main } from './components/Main';
+import { Home } from './components/Home';
 
 const App = (props: any) => {
   return (
     <div className="App container">
       <Header></Header>
-      <Main></Main>
+      <Home></Home>
     </div>
   )
 };

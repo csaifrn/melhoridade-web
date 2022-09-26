@@ -1,10 +1,10 @@
-export function Main(){
+import { Atividade } from "./Atividade";
+import { Pesquisa } from "./Pesquisa";
+
+export function Home(){
     return(
         <main>
-            <div className="container-pesquisa">
-                <img className="icon" src="../images/commands/lupa.png" alt=""/>
-                <input type="text" id="buscar" placeholder="Buscar por pessoa"/>
-            </div>
+            <Pesquisa></Pesquisa>
             <div className="container-conteudo">
                 <nav className="menu-atv">
                     <ol>
@@ -22,6 +22,7 @@ export function Main(){
                 </nav>
                 <section className="container-atv">
                     <ul>
+                        <Atividade></Atividade>
                         <li> <div> <img src="../images/icons/dumbell.png" alt=""/>    </div> <p>Musculação 1</p>     </li>
                         <li> <div> <img src="../images/icons/dance.png" alt=""/>      </div> <p>Dança 1</p>          </li>
                         <li> <div> <img src="../images/icons/microphone.png" alt=""/> </div> <p>Coral 1</p>          </li>
