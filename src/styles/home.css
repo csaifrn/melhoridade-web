@@ -1,0 +1,110 @@
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 374px;
+}
+
+.container-pesquisa{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+}
+.icon{
+    position: absolute;
+    margin-left: 10px;
+
+}
+#buscar{
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    border-radius: 100px;
+    padding: 0 40px;
+    width: 100%;
+    height: 40px;
+}
+
+/* ------------------------------ */
+
+.container-conteudo{
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ------------------------------ */
+
+.menu-atv ol{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-atv .btn{
+    font-size: 12px;  
+    border: none;
+    background-color: transparent;
+}
+.menu-atv .btn:hover{
+    font-size: 14px;
+    border-bottom: 2px solid var(--header-color);
+}
+.extensao-button{
+    margin-right: 3vh;
+}
+.filtro-button{
+    color: white;
+    width: 90px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--header-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* ------------------------------ */
+
+.container-atv ul{
+    display: grid;
+    column-gap: 10%;
+    padding: 0 5%;
+    grid-template-columns: auto auto;
+}
+
+.container-atv li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-atv div{
+    padding: 10px;
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--atv-extensao);
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+.container-atv img{
+    width: 60px;
+}
+.container-atv p{
+    max-width: 80px;
+    text-align: center;
+}
+
+/* ------------------------------ */
+
+@media (max-width: 414px) {
+    main{
+        width: 90%;
+    }
+}

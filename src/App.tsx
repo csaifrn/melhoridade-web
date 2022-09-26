@@ -1,13 +1,15 @@
 import React from 'react';
-import { Header } from './components/Header';
 import './styles/global.css';
 import './styles/header.css';
+import './styles/home.css';
+import { Header } from './components/Header';
+import { Main } from './components/Main';
 
 const App = (props: any) => {
-
   return (
-    <div className="App">
+    <div className="App container">
       <Header></Header>
+      <Main></Main>
     </div>
   )
 };
