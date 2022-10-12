@@ -1,12 +1,14 @@
+import { ContainerHeader } from './styles'
+
 export function Header() {
     return(
-        <header>
+        <ContainerHeader>
             <div className="menu-icon">
                 <img src="../images/commands/home.png" alt="" />
             </div>
             <div className="menu-icon">
                 <img src="../images/commands/menu-sanduiche.png" alt="" />
             </div>
-        </header>
+        </ContainerHeader>
     )
 }

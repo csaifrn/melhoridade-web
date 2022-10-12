@@ -1,17 +1,19 @@
-import React from 'react';
-import './styles/global.css';
-import './styles/header.css';
-import './styles/home.css';
-import { Header } from './components/Header';
-import { Home } from './components/Home';
+import React from "react";
+import { Header } from "./components/Header";
+import { Pesquisa } from "./components/PesquisaInput";
+import { Container } from "./components/Container";
+import { Atividades } from "./components/Atividades";
 
-const App = (props: any) => {
+const App = () => {
   return (
     <div className="App container">
-      <Header></Header>
-      <Home></Home>
+      <Header />
+      <Pesquisa />
+      <Container>
+        <Atividades />
+      </Container>
     </div>
-  )
+  );
 };
 
 export default App;
