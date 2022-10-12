@@ -1,14 +1,12 @@
 import { Container } from "./styles";
-import { MenuAtividades } from "../MenuAtividades";
+import { MenuAtv } from "../MenuAtv";
 import { ListaAtv } from "../ListaAtv";
 import { IListAtv } from "../../types/ListaAtv";
-
-
 
 export function ContainerAtv({listaAtv}: IListAtv) {
   return (
     <Container>
-      <MenuAtividades />
+      <MenuAtv />
       <ListaAtv listaAtv={listaAtv} />
     </Container>
   );

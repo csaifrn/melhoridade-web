@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-export function MenuAtividades() {
+export function MenuAtv() {
   return (
     <Container>
         <nav className="menu-atv">
