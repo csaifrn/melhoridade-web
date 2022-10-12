@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerMenuAtv = styled.div`
+export const Container = styled.div`
 
     .menu-atv ol{
         display: flex;

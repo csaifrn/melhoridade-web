@@ -1,8 +1,8 @@
-import { ContainerMenuAtv } from "./styles";
+import { Container } from "./styles";
 
 export function MenuAtividades() {
   return (
-    <ContainerMenuAtv>
+    <Container>
         <nav className="menu-atv">
           <ol>
             <li>
@@ -25,6 +25,6 @@ export function MenuAtividades() {
             </li>
           </ol>
         </nav>
-    </ContainerMenuAtv>
+    </Container>
   );
 }

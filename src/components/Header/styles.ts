@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ContainerHeader = styled.div`
+export const Container = styled.div`
 
     background-color: var(--header-color);
     margin-bottom: 20px; 
