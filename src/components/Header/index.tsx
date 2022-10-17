@@ -1,5 +1,7 @@
 import { Container } from './styles'
 
+import imageMenu from '/images/commands/menu-sanduiche.png';
+
 export function Header() {
     return(
         <Container>
@@ -7,7 +9,7 @@ export function Header() {
                 <img src="../images/commands/home.png" alt="" />
             </div>
             <div className="menu-icon">
-                <img src="../images/commands/menu-sanduiche.png" alt="" />
+                <img src={imageMenu} alt="" />
             </div>
         </Container>
     )
