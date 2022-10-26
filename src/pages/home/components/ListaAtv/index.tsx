@@ -1,4 +1,4 @@
-import { IListAtv } from "../../shared/types/ListaAtv";
+import { IListAtv } from "../../../../types/ListaAtv";
 import { Atividade } from "../Atividade";
 
 export const ListaAtv = ({ listaAtv }: IListAtv) => {

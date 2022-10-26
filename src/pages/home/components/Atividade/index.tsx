@@ -1,4 +1,4 @@
-import { IAtividade } from "../../../../shared/types/Atividade";
+import { IAtividade } from "../../../../types/Atividade";
 import { Container } from "./styles";
 
 type Props = {
