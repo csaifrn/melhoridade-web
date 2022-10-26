@@ -1,12 +1,15 @@
-import { IListAtv } from "../../../../types/ListaAtv";
+import { IListaAtv } from "../../../../types/ListaAtv";
 import { Atividade } from "../Atividade";
+import { Container } from "./styles";
 
-export const ListaAtv = ({ listaAtv }: IListAtv) => {
+export const ListaAtv = ({ listaAtv }: IListaAtv) => {
   return (
-    <ul>
-      {listaAtv.map((atv) => (
-        <Atividade key={atv.id} atv={atv} />
-      ))}
-    </ul>
+    <Container>
+      <ul>
+        {listaAtv.map((atv) => (
+          <Atividade key={atv.id} atv={atv} />
+        ))}
+      </ul>
+    </Container>
   );
 };

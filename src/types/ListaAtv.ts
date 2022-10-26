@@ -1,5 +1,5 @@
 import { IAtividade } from "./Atividade" 
 
-export type IListAtv = {
+export type IListaAtv = {
     listaAtv: IAtividade[]
 }

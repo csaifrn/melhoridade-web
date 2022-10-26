@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Pesquisa } from "../../shared/components";
 import { Container } from "../../shared/Container";
 import { IAtividade } from "../../types/Atividade";
-import { ContainerAtv } from "./components/ContainerAtv";
+import { ListaAtv } from "./components/ListaAtv";
+import { MenuAtv } from "./components/MenuAtv";
 
 export const Home = () => {
   const [listAtividades, setListAtividades] = useState<IAtividade[]>([
@@ -37,7 +38,8 @@ export const Home = () => {
     <>
       <Pesquisa />
       <Container>
-        <ContainerAtv listaAtv={listAtividades} />
+        <MenuAtv />
+        <ListaAtv listaAtv={listAtividades} />
       </Container>
     </>
   );
