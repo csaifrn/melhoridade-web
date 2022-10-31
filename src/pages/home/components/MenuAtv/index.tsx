@@ -20,7 +20,7 @@ export function MenuAtv() {
                   className="seta-baixo"
                   src="../images/commands/seta-baixo.png"
                   alt=""
-                />
+                  />
               </button>
             </li>
           </ol>
