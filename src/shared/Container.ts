@@ -8,5 +8,7 @@ export const Container = styled.div`
     padding: 15px;
     width: 90%;
     box-sizing: border-box;
-   
+   hr{
+    border-top: 1px initial var(--border-color); 
+   }
 `;
