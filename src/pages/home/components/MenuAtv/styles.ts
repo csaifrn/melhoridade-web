@@ -22,9 +22,6 @@ export const Container = styled.div`
         box-sizing: border-box;
         width: 5em;
     }
-    .list-button{
-        width: 20%;
-    }
     .filtro-button{
         color: white;
         width: 90px;

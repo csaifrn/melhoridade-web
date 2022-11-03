@@ -13,12 +13,12 @@ export const Container = styled.div`
     div{
         max-width: 80px;
         max-height: 80px;
+        margin: 20px;
     }
     img{
-        margin: 20px;
         background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
         border-radius: 10px;
-        padding: 10%;
+        padding: 7px;
         background-opacity: 40%
     }
 

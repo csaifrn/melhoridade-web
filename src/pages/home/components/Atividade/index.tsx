@@ -9,9 +9,8 @@ export function Atividade({ atv }: Props) {
   return (
     <Container>
       <div>
-        {" "}
-        <img src={atv.url} />{" "}
-      </div>{" "}
+        <img src={atv.url} />
+      </div>
       <p>{atv.title}</p>
     </Container>
   );

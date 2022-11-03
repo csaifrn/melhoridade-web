@@ -5,7 +5,7 @@ export function MenuAtv() {
     <Container>
         <nav className="menu-atv">
           <ol>
-            <li className="list-button">
+            <li>
               <button className="btn extensao-button" type="button">
                 Extensão
               </button>

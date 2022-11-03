@@ -2,11 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 ol{
-    display: flex
+    display: flex;
+    flex-direction: row;
     align-items: center;
-}
-.container-prof{
-    margin: 15px 10px;
 }
 .prof-titulo, .prof-foto, .prof-nome{
     margin: 10px;
@@ -18,8 +16,5 @@ ol{
 .prof-foto{
     width: 77px;
     height: 77px;
-}
-.prof-nome{
-    margin-top: 15%
 }
 `;
