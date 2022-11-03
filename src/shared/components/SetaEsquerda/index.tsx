@@ -4,7 +4,7 @@ export function SetaEsquerda() {
   return (
     <Container>
         <div>
-            <img src="../images/commands/seta-esquerda.png"/>
+            <img src="../images/commands/seta-esquerda.svg"/>
         </div>
     </Container>
   );

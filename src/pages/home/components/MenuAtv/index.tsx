@@ -5,7 +5,7 @@ export function MenuAtv() {
     <Container>
         <nav className="menu-atv">
           <ol>
-            <li>
+            <li className="list-button">
               <button className="btn extensao-button" type="button">
                 Extensão
               </button>
@@ -18,7 +18,7 @@ export function MenuAtv() {
                 Filtro
                 <img
                   className="seta-baixo"
-                  src="../images/commands/seta-baixo.png"
+                  src="../images/commands/seta-baixo.svg"
                   alt=""
                   />
               </button>

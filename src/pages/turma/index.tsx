@@ -10,11 +10,11 @@ export const Turma = () => {
     <>
     <SetaEsquerda/>
       <Container>
-         <TurmaNome />
+         <TurmaNome title='Dança 1'/>
          <MenuAtv />
          <hr/>
-         <Professor title='Marina Silva'/>
-         <Cronograma /> 
+         <Professor title='Marina da Silva' url='../images/commands/professora-perfil.png'/>
+         <Cronograma dia='Terça/Quinta' hora='07:00 - 07:45' sala='Sala 1' /> 
       </Container>
     </>
   );

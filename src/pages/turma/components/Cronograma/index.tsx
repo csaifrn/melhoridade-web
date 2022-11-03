@@ -1,6 +1,7 @@
+import { ICronograma } from "../../../../types/Cronograma";
 import { Container } from "./styles";
 
-export function Cronograma() {
+export function Cronograma({hora,dia,sala}: ICronograma) {
   return (
       <>
     <Container>
@@ -13,8 +14,8 @@ export function Cronograma() {
                         <th><p className="cabecalho">Dias e Local</p></th>
                     </tr>
                     <tr>
-                        <td><p className="horario">07:00 - 07:45</p></td>
-                        <td><p className="data">Terca e Quinta</p><p className="sala">SALA 1</p></td>
+                        <td><p className="horario">{hora}</p></td>
+                        <td><p className="data">{dia}</p><p className="sala">{sala}</p></td>
                     </tr>
                 </table>
             </div>

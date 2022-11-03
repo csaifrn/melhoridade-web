@@ -8,16 +8,22 @@ export const Container = styled.div`
         justify-content: space-between;
     }
     .menu-atv .btn{
-        font-size: 12px;  
-        border: none;
         background-color: transparent;
     }
-    .menu-atv .btn:hover{
-        font-size: 14px;
-        border-bottom: 2px solid var(--header-color);
+    .ensino-button{
+        font-size: 12px;
+        border:none
     }
     .extensao-button{
+        border:none;
+        font-size: 14px;
         margin-right: 3vh;
+        border-bottom: 2px solid var(--header-color);
+        box-sizing: border-box;
+        width: 5em;
+    }
+    .list-button{
+        width: 20%;
     }
     .filtro-button{
         color: white;
@@ -30,6 +36,10 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
         gap: 10px;
+    }
+    .menu-atv .btn:hover{
+        font-size: 14px;
+        cursor: pointer;
     }
 
 `;

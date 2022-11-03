@@ -16,6 +16,10 @@ export const Container = styled.div`
     }
     img{
         margin: 20px;
+        background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
+        border-radius: 10px;
+        padding: 10%;
+        background-opacity: 40%
     }
 
 `;
