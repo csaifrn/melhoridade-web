@@ -13,7 +13,7 @@ export const Turma = () => {
          <TurmaNome />
          <MenuAtv />
          <hr/>
-         <Professor />
+         <Professor title='Marina Silva'/>
          <Cronograma /> 
       </Container>
     </>

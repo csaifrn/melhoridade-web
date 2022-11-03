@@ -1,6 +1,7 @@
 import { Container } from "./styles";
+import {IProfessor} from '../../../../types/Professor'
 
-export function Professor() {
+export function Professor({title}:IProfessor) {
   return (
       <>
     <Container>
@@ -9,7 +10,7 @@ export function Professor() {
 
                 <ol>
                     <li className="prof-foto"><img src="../images/commands/professora-perfil.png"/></li>
-                    <li className="prof-nome"><p>Professora Marina da Silva</p></li>
+                    <li className="prof-nome"><p>{title}</p></li>
                 </ol>
             </div>
     </Container>
