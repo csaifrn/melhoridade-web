@@ -10,27 +10,27 @@ export const Home = () => {
     {
       id: "1",
       title: "Musculação 1",
-      url: "",
+      icon: "",
     },
     {
       id: "2",
       title: "Musculação 2",
-      url: "",
+      icon: "",
     },
     {
       id: "3",
       title: "Musculação 3",
-      url: "",
+      icon: "",
     },
     {
       id: "4",
       title: "Musculação 4",
-      url: "",
+      icon: "",
     },
     {
       id: "5",
       title: "Musculação 5",
-      url: "",
+      icon: "",
     },
   ]);
 

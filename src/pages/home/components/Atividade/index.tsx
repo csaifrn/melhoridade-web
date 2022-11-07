@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { IAtividade } from "../../../../types/Atividade";
 import { Container } from "./styles";
 
@@ -6,10 +7,12 @@ type Props = {
 };
 
 export function Atividade({ atv }: Props) {
+  const navigate = useNavigate();
+
   return (
-    <Container>
+    <Container onClick={() => navigate(`/turma/${atv.id}`)}>
       <div>
-        <img src={atv.url} />
+        <img src={atv.icon} />
       </div>
       <p>{atv.title}</p>
     </Container>

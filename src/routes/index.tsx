@@ -6,7 +6,7 @@ export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/home" element={<Home />} />
-      <Route path="/turma" element={<Turma />} />
+      <Route path="/turma/:id" element={<Turma />} />
 
       <Route path="*" element={<Navigate to={"/home"} />} />
     </Routes>

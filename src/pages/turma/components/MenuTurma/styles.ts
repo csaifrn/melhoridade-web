@@ -6,10 +6,10 @@ export const Container = styled.div`
         align-items: baseline;
     }
 
-    .menu-atv{
+    .menu-turma{
         margin: 15px 10px;
     }
-    .menu-atv .participantes-button{
+    .menu-turma .participantes-button{
         font-size: 12px;
         background-color: transparent;
         border: none;
@@ -23,7 +23,7 @@ export const Container = styled.div`
         box-sizing: border-box;
         width: 90%
     }
-    .menu-atv .btn:hover{
+    .menu-turma .btn:hover{
         font-size: 14px;
         cursor: pointer;
     }
