@@ -1,3 +1,4 @@
+import { Filtro } from "../Filtro";
 import { Container } from "./styles";
 
 export function MenuAtv() {
@@ -14,14 +15,7 @@ export function MenuAtv() {
               </button>
             </li>
             <li>
-              <button className="filtro-button">
-                Filtro
-                <img
-                  className="seta-baixo"
-                  src="../images/commands/seta-baixo.svg"
-                  alt=""
-                  />
-              </button>
+              <Filtro />
             </li>
           </ol>
         </nav>

@@ -1,0 +1,16 @@
+.react-select-container{
+    background-color: var(--header-color);
+}
+.Select{
+    height: 25px;
+    width: 490px;
+    border-radius: 100px;
+    background-color: var(--header-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+::placeholder{
+    color:white;
+}
