@@ -1,4 +1,4 @@
-export type IAtividade = {
+export type ICurso = {
     id: string;
     title: string;
     icon: string;

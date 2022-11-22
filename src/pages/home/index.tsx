@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Pesquisa } from "../../shared/components";
 import { Container } from "../../shared/Container";
-import { IAtividade } from "../../types/Atividade";
-import { ListaAtv } from "./components/ListaAtv";
-import { MenuAtv } from "./components/MenuAtv";
+import { ICurso } from "../../types/Curso";
+import { ListaDeCursos } from "./components/ListaDeCursos";
+import { MenuCurso } from "./components/MenuCurso";
 
 export const Home = () => {
-  const [listAtividades, setListAtividades] = useState<IAtividade[]>([
+  const [listaDeCursos, setListaDeCursos] = useState<ICurso[]>([
     {
       id: "1",
       title: "Musculação 1",
@@ -38,8 +38,8 @@ export const Home = () => {
     <>
       <Pesquisa />
       <Container>
-        <MenuAtv />
-        <ListaAtv listaAtv={listAtividades} />
+        <MenuCurso />
+        <ListaDeCursos listaDeCursos={listaDeCursos} />
       </Container>
     </>
   );

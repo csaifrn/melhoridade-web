@@ -1,4 +1,4 @@
 export type IProfessor = {
-    title: string;
+    name: string;
     url: string;
 }

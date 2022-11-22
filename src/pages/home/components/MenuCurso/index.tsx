@@ -1,7 +1,7 @@
 import { Filtro } from "../Filtro";
 import { Container } from "./styles";
 
-export function MenuAtv() {
+export function MenuCurso() {
   return (
     <Container>
         <nav className="menu-atv">

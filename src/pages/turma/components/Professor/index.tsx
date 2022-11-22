@@ -1,7 +1,7 @@
 import { Container } from "./styles";
 import { IProfessor } from "../../../../types/Professor";
 
-export function Professor({ title, url }: IProfessor) {
+export function Professor({ name, url }: IProfessor) {
   return (
     <>
       <Container>
@@ -12,7 +12,7 @@ export function Professor({ title, url }: IProfessor) {
               <img src={url} />
             </li>
             <li className="prof-nome">
-              <p>{title}</p>
+              <p>{name}</p>
             </li>
           </ol>
         </div>
