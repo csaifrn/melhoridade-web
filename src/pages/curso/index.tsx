@@ -1,6 +1,6 @@
 import { Container } from "../../shared/Container";
 import { SetaEsquerda } from "../../shared/components/SetaEsquerda";
-import { MenuCurso } from "./components/MenuCurso";
+import { MenuCurso } from "../../shared/components/MenuCurso";
 import { Professor } from "./components/Professor";
 import { Cronograma } from "./components/Cronograma";
 
@@ -12,6 +12,7 @@ export const Curso = () => {
         <MenuCurso />
         <hr />
         <Professor
+          id="1"
           name="Marina da Silva"
           url="../images/commands/professora-perfil.png"
         />
