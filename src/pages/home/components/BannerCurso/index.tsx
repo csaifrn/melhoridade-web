@@ -6,11 +6,11 @@ type Props = {
   curso: ICurso;
 };
 
-export function Curso({ curso }: Props) {
+export function BannerCurso({ curso }: Props) {
   const navigate = useNavigate();
 
   return (
-    <Container onClick={() => navigate(`/turma/${curso.id}`)}>
+    <Container onClick={() => navigate(`/curso/${curso.id}`)}>
       <div>
         <img src={curso.icon} />
       </div>

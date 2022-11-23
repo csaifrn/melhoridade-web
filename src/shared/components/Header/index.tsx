@@ -3,7 +3,7 @@ import { Container } from './styles'
 
 import imageMenu from '/images/commands/menu-sanduiche.svg';
 
-export function Header() {
+export const Header = () => {
     const navigate = useNavigate();
     return(
         <Container >

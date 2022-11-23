@@ -6,10 +6,10 @@ export const Container = styled.div`
         align-items: baseline;
     }
 
-    .menu-turma{
+    .menu-curso{
         margin: 15px 10px;
     }
-    .menu-turma .participantes-button{
+    .menu-curso .participantes-button{
         font-size: 12px;
         background-color: transparent;
         border: none;
@@ -23,7 +23,7 @@ export const Container = styled.div`
         box-sizing: border-box;
         width: 90%
     }
-    .menu-turma .btn:hover{
+    .menu-curso .btn:hover{
         font-size: 14px;
         cursor: pointer;
     }

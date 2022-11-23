@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-export function SetaEsquerda() {
+export const SetaEsquerda = () => {
   return (
     <Container>
         <div>

@@ -1,10 +1,10 @@
 import { Container } from "./styles";
 
-export function MenuTurma() {
+export const MenuCurso = () => {
   return (
     <>
       <Container>
-        <nav className="menu-turma">
+        <nav className="menu-curso">
           <ol>
             <li>
               <button className="btn dados-button" type="button">

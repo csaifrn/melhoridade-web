@@ -1,7 +1,7 @@
 import { Container } from "./styles";
 import { IProfessor } from "../../../../types/Professor";
 
-export function Professor({ name, url }: IProfessor) {
+export const Professor = ({ name, url }: IProfessor) => {
   return (
     <>
       <Container>
@@ -20,4 +20,4 @@ export function Professor({ name, url }: IProfessor) {
       <hr />
     </>
   );
-}
+};

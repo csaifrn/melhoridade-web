@@ -1,6 +1,6 @@
 import { ContainerPesquisa } from "./styles"
 
-export function Pesquisa(){
+export const Pesquisa = () => {
     return(
         <ContainerPesquisa>
             <img className="icon" src="../images/commands/lupa.svg" alt=""/>

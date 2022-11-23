@@ -1,5 +1,5 @@
 import { IListaDeCursos } from "../../../../types/ListaDeCursos";
-import { Curso } from "../Curso";
+import { BannerCurso } from "../BannerCurso";
 import { Container } from "./styles";
 
 export const ListaDeCursos = ({ listaDeCursos }: IListaDeCursos) => {
@@ -7,7 +7,7 @@ export const ListaDeCursos = ({ listaDeCursos }: IListaDeCursos) => {
     <Container>
       <ul>
         {listaDeCursos.map((curso) => (
-          <Curso key={curso.id} curso={curso} />
+          <BannerCurso key={curso.id} curso={curso} />
         ))}
       </ul>
     </Container>

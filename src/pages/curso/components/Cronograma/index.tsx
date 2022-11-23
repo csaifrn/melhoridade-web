@@ -1,7 +1,7 @@
 import { ICronograma } from "../../../../types/Cronograma";
 import { Container } from "./styles";
 
-export function Cronograma({hora,dia,sala}: ICronograma) {
+export const Cronograma = ({hora,dia,sala}: ICronograma) => {
   return (
       <>
     <Container>
