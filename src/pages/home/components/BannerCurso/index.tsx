@@ -6,7 +6,7 @@ type Props = {
   curso: ICurso;
 };
 
-export function BannerCurso({ curso }: Props) {
+export const BannerCurso = ({ curso }: Props) => {
   const navigate = useNavigate();
 
   return (

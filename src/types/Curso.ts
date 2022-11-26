@@ -1,4 +1,5 @@
 import { ICronograma } from "./Cronograma";
+import { IListaDeAlunos } from "./ListaDeAlunos";
 import { IProfessor } from "./Professor";
 
 export type ICurso = {
@@ -7,4 +8,5 @@ export type ICurso = {
   icon: string;
   professor?: IProfessor;
   cronograma?: ICronograma;
+  participantes?: IListaDeAlunos;
 };

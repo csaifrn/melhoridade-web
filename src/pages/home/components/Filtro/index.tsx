@@ -1,5 +1,4 @@
 import Select from "react-select";
-import Placeholder from "react-select/dist/declarations/src/components/Placeholder";
 import "./styles.css";
 
 const options = [
@@ -8,6 +7,7 @@ const options = [
   { value: "dança3", label: "dança3" },
   { value: "dança4", label: "dança4" },
 ];
+
 const colourStyles = {
   control: (styles: any) => ({
     ...styles,
@@ -29,6 +29,7 @@ const colourStyles = {
     };
   },
 };
+
 export const Filtro = () => {
   return (
     <Select

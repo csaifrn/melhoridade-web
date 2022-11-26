@@ -3,8 +3,14 @@ import { SetaEsquerda } from "../../shared/components/SetaEsquerda";
 import { MenuCurso } from "../../shared/components/MenuCurso";
 import { Professor } from "./components/Professor";
 import { Cronograma } from "./components/Cronograma";
+import { useParams } from "react-router-dom";
 
 export const Curso = () => {
+  // pegar o id da url e retornar o curso correspondente
+  // o curso terá o titulo, o professor, o cronograma
+
+  const { id = "" } = useParams<"id">();
+
   return (
     <>
       <SetaEsquerda />

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Pesquisa } from "../../shared/components";
 import { Container } from "../../shared/Container";
 import { ICurso } from "../../types/Curso";
+import { IListaDeAlunos } from "../../types/ListaDeAlunos";
 import { ListaDeCursos } from "./components/ListaDeCursos";
 import { MenuCurso } from "./components/MenuCurso";
 
@@ -11,6 +12,28 @@ export const Home = () => {
       id: "1",
       title: "Musculação 1",
       icon: "",
+      participantes: {
+        listaDeAlunos: [
+          {
+            id: "1",
+            name: "Adeilda",
+            cpf: "123.456.789-00",
+            url: "",
+          },
+          {
+            id: "2",
+            name: "Adeilda",
+            cpf: "123.456.789-00",
+            url: "",
+          },
+          {
+            id: "2",
+            name: "Adeilda",
+            cpf: "123.456.789-00",
+            url: "",
+          },
+        ],
+      },
     },
     {
       id: "2",
@@ -20,16 +43,6 @@ export const Home = () => {
     {
       id: "3",
       title: "Musculação 3",
-      icon: "",
-    },
-    {
-      id: "4",
-      title: "Musculação 4",
-      icon: "",
-    },
-    {
-      id: "5",
-      title: "Musculação 5",
       icon: "",
     },
   ]);
