@@ -12,18 +12,15 @@ export const MenuCurso = () => {
         <nav className="menu-curso">
           <ol>
             <li>
-              <button className="btn dados-button" type="button">
-                Dados gerais
-              </button>
+              <p className="btn dados-button">Dados gerais</p>
             </li>
             <li>
-              <button
+              <p
                 className="btn participantes-button"
-                type="button"
                 onClick={() => navigate(`/participantes/${id}`)}
               >
                 Participantes
-              </button>
+              </p>
             </li>
           </ol>
         </nav>

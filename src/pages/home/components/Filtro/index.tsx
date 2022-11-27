@@ -1,44 +1,53 @@
-import Select from "react-select";
-import "./styles.css";
-
-const options = [
-  { value: "dança1", label: "dança1" },
-  { value: "dança2", label: "dança2" },
-  { value: "dança3", label: "dança3" },
-  { value: "dança4", label: "dança4" },
-];
-
-const colourStyles = {
-  control: (styles: any) => ({
-    ...styles,
-    overflow: "hidden",
-    color: "black !important",
-    backgroundColor: "var(--header-color)",
-    fontSize: 23,
-    paddingLeft: "center",
-    height: 30,
-    width: "110px",
-    borderRadius: "15px",
-    textAlign: "center",
-  }),
-  singleValue: (styles: any) => ({ ...styles, color: "white" }),
-  placeholder: (defaultStyles: any) => {
-    return {
-      ...defaultStyles,
-      color: "#ffffff",
-    };
-  },
-};
+import { useState } from "react";
+import { ICurso } from "../../../../types/Curso";
 
 export const Filtro = () => {
+  const [listaDeCursos, setListaDeCursos] = useState<ICurso[]>([
+    {
+      id: "1",
+      title: "Musculação 1",
+      icon: "",
+      participantes: {
+        listaDeAlunos: [
+          {
+            id: "1",
+            name: "Adeilda",
+            cpf: "123.456.789-00",
+            url: "",
+          },
+          {
+            id: "2",
+            name: "Adeilda",
+            cpf: "123.456.789-00",
+            url: "",
+          },
+          {
+            id: "2",
+            name: "Adeilda",
+            cpf: "123.456.789-00",
+            url: "",
+          },
+        ],
+      },
+    },
+    {
+      id: "2",
+      title: "Musculação 2",
+      icon: "",
+    },
+    {
+      id: "3",
+      title: "Musculação 3",
+      icon: "",
+    },
+  ]);
+
   return (
-    <Select
-      components={{
-        IndicatorSeparator: () => null,
-      }}
-      placeholder="Filtro"
-      options={options}
-      styles={colourStyles}
-    />
+    <select className="select">
+      <option className="option">Filtro</option>
+      {listaDeCursos.map((curso) => (
+        <option className="option">{curso.title}</option>
+      ))}
+    </select>
   );
 };
