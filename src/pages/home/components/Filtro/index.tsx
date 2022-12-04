@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { ICurso } from "../../../../types/Curso";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 export const Filtro = () => {
+  const [curso, setCurso] = useState("");
+
   const [listaDeCursos, setListaDeCursos] = useState<ICurso[]>([
     {
       id: "1",
@@ -42,12 +47,27 @@ export const Filtro = () => {
     },
   ]);
 
+  const handleChange = (event: SelectChangeEvent) => {
+    setCurso(event.target.value);
+  };
+
   return (
-    <select className="select">
-      <option className="option">Filtro</option>
-      {listaDeCursos.map((curso) => (
-        <option className="option">{curso.title}</option>
-      ))}
-    </select>
+    <div>
+      <FormControl>
+        <Select
+          value={curso}
+          onChange={handleChange}
+          displayEmpty
+          inputProps={{ "aria-label": "Without label" }}
+        >
+          <MenuItem value="">Filtro</MenuItem>
+          {listaDeCursos.map((item) => (
+            <MenuItem value={item.id} key={item.id}>
+              {item.title}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+    </div>
   );
 };
