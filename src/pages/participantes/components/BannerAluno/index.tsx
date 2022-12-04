@@ -6,7 +6,7 @@ type Props = {
   aluno: IAluno;
 };
 
-export function BannerAluno({ aluno }: Props) {
+export const BannerAluno = ({ aluno }: Props) => {
   const navigate = useNavigate();
 
   return (

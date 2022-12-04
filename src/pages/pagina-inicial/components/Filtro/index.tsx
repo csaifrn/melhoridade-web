@@ -5,7 +5,7 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 export const Filtro = () => {
-  const [curso, setCurso] = useState("");
+  const [item, setItem] = useState("");
 
   const [listaDeCursos, setListaDeCursos] = useState<ICurso[]>([
     {
@@ -48,22 +48,22 @@ export const Filtro = () => {
   ]);
 
   const handleChange = (event: SelectChangeEvent) => {
-    setCurso(event.target.value);
+    setItem(event.target.value);
   };
 
   return (
     <div>
       <FormControl>
         <Select
-          value={curso}
+          value={item}
           onChange={handleChange}
           displayEmpty
           inputProps={{ "aria-label": "Without label" }}
         >
           <MenuItem value="">Filtro</MenuItem>
-          {listaDeCursos.map((item) => (
-            <MenuItem value={item.id} key={item.id}>
-              {item.title}
+          {listaDeCursos.map((curso) => (
+            <MenuItem value={curso.id} key={curso.id}>
+              {curso.title}
             </MenuItem>
           ))}
         </Select>
