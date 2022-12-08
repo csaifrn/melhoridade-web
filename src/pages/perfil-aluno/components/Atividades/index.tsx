@@ -29,7 +29,7 @@ export const Atividades = () => {
         </nav>
       </div>
 
-      <div>
+      <div className="tabela">
         <table className="extensao-table">
           <tr>
             <th>

@@ -5,12 +5,11 @@ export const Container = styled.div`
     margin: 2% 1% 0 2%;
   }
 
-  .extensao-table {
-    text-align: center;
-    table-layout: fixed;
-    width: 100%;
-    border-spacing: 0;
-    margin-bottom: 8%;
+  .container-idoso,
+  ol {
+    display: flex;
+    align-items: center;
+    list-style: none;
   }
 
   .th:not(:last-child),
@@ -32,7 +31,7 @@ export const Container = styled.div`
 
   .documentos-table {
     margin: 5%;
-    width: 300px;
+    width: 90%;
     border: 1px solid var(--border-color);
     border-spacing: 0;
   }

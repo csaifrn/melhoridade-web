@@ -14,6 +14,8 @@ export const DadosPessoais = () => {
         </ol>
       </div>
 
+      <hr/>
+
       <div className="container-idoso">
         <ol>
           <li className="foto-idoso">
@@ -39,6 +41,9 @@ export const DadosPessoais = () => {
           <li className="dado-idoso">
             <p>Tel. Contato: (84) 9 9999-9999</p>
           </li>
+
+          <hr/>
+
           <h2 className="contato-emergencia">Contato de Emergência</h2>
           <li className="dado-idoso">
             <p>Nome: Kamila</p>
