@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Pesquisa } from "../../shared/components";
 import { Container } from "../../shared/Container";
 import { ICurso } from "../../types/Curso";
-import { IListaDeAlunos } from "../../types/ListaDeAlunos";
 import { ListaDeCursos } from "./components/ListaDeCursos";
-import { MenuCurso } from "./components/MenuCurso";
+import { Filtro } from "./components/Filtro";
+import { Menu } from "../../shared/components/Menu";
 
 export const Home = () => {
   const [listaDeCursos, setListaDeCursos] = useState<ICurso[]>([
@@ -51,7 +51,19 @@ export const Home = () => {
     <>
       <Pesquisa />
       <Container>
-        <MenuCurso />
+        <ol className="menu-atv">
+          <li>
+            <Menu
+              item1="Extensão"
+              onclick1={() => {}}
+              item2="Ensino"
+              onclick2={() => {}}
+            />
+          </li>
+          <li>
+            <Filtro />
+          </li>
+        </ol>
         <ListaDeCursos listaDeCursos={listaDeCursos} />
       </Container>
     </>

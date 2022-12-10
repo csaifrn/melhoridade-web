@@ -1,9 +1,9 @@
+import { useNavigate, useParams } from "react-router-dom";
 import { Container } from "../../shared/Container";
 import { SetaEsquerda } from "../../shared/components/SetaEsquerda";
-import { MenuCurso } from "../../shared/components/MenuCurso";
+import { Menu } from "../../shared/components/Menu";
 import { Professor } from "./components/Professor";
 import { Cronograma } from "./components/Cronograma";
-import { useParams } from "react-router-dom";
 
 export const Curso = () => {
   // pegar o id da url e retornar o curso correspondente
@@ -11,11 +11,18 @@ export const Curso = () => {
 
   const { id = "" } = useParams<"id">();
 
+  const navigate = useNavigate();
+
   return (
     <>
       <SetaEsquerda />
       <Container>
-        <MenuCurso />
+        <Menu
+          item1="Dados gerais"
+          onclick1={() => {}}
+          item2="Participantes"
+          onclick2={() => navigate(`/curso/${id}/participantes`)}
+        />
         <hr />
         <Professor
           id="1"

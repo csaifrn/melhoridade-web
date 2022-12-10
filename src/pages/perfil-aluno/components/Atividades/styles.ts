@@ -16,18 +16,6 @@ export const Container = styled.div`
     list-style: none;
   }
 
-  .menu-atv ol {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5% 4%;
-  }
-  .menu-atv .btn {
-    background-color: transparent;
-    border: none;
-    margin-right: 1em;
-  }
-
   .extensao-table {
     text-align: center;
     table-layout: fixed;

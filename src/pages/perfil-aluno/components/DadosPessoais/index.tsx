@@ -30,7 +30,7 @@ export const DadosPessoais = () => {
       <div className="container-infoidoso">
         <ul className="infoidoso">
           <li className="dado-idoso">
-            <p>CpF: 123.456.789-00</p>
+            <p>CPF: 123.456.789-00</p>
           </li>
           <li className="dado-idoso">
             <p>Idade: 61</p>

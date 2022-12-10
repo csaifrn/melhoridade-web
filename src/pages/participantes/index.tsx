@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Pesquisa, SetaEsquerda } from "../../shared/components";
-import { MenuCurso } from "../../shared/components/MenuCurso";
+import { Menu } from "../../shared/components/Menu";
 import { Container } from "../../shared/Container";
 import { IAluno } from "../../types/Aluno";
 import { ListaDeAlunos } from "./components/ListaDeAlunos";
@@ -19,7 +19,12 @@ export const Participantes = () => {
       <SetaEsquerda />
       <Pesquisa />
       <Container>
-        <MenuCurso />
+        <Menu
+          item1="Dados gerais"
+          onclick1={() => {}}
+          item2="Participantes"
+          onclick2={() => {}}
+        />
         <hr />
         <ListaDeAlunos listaDeAlunos={listaDeAlunos} />
       </Container>

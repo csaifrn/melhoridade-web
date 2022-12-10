@@ -6,6 +6,7 @@ export const ContainerPesquisa = styled.div`
     align-items: center;
     margin: 20px 0;
     width: 90%;
+    max-width: 500px;
 
     .icon{
         position: absolute;

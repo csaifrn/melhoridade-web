@@ -13,6 +13,8 @@ export const Documentacao = () => {
           </li>
         </ol>
       </div>
+
+      <hr/>
       
       <table className="documentos-table">
         <tr>
@@ -28,7 +30,7 @@ export const Documentacao = () => {
             <img src="" />
           </td>
           <td>
-            <p className="documento">CÓpIA DO RG (FRENTE)</p>
+            <p className="documento">CÓPIA DO RG (FRENTE)</p>
           </td>
         </tr>
         <tr>
@@ -36,7 +38,7 @@ export const Documentacao = () => {
             <img src="" />
           </td>
           <td>
-            <p className="documento">CÓpIA DO RG (VERSO)</p>
+            <p className="documento">CÓPIA DO RG (VERSO)</p>
           </td>
         </tr>
         <tr>
@@ -44,7 +46,7 @@ export const Documentacao = () => {
             <img src="" />
           </td>
           <td>
-            <p className="documento">COMpROVANTE DE RESIDÊNCIA</p>
+            <p className="documento">COMPROVANTE DE RESIDÊNCIA</p>
           </td>
         </tr>
         <tr>
@@ -52,7 +54,7 @@ export const Documentacao = () => {
             <img src="" />
           </td>
           <td>
-            <p className="documento">pASSApORTE VACINAL</p>
+            <p className="documento">PASSAPORTE VACINAL</p>
           </td>
         </tr>
         <tr>

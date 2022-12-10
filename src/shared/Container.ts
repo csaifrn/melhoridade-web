@@ -12,4 +12,10 @@ export const Container = styled.div`
     hr{
     border-top: 1px initial var(--border-color); 
    }
+
+   .menu-atv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;

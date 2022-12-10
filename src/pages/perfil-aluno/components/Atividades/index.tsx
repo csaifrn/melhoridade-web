@@ -1,6 +1,10 @@
+import { useParams } from "react-router-dom";
+import { Menu } from "../../../../shared/components/Menu";
 import { Container } from "./styles";
 
 export const Atividades = () => {
+  const { id = "" } = useParams<"id">();
+
   return (
     <Container>
       <div className="atv-ttl">
@@ -14,20 +18,14 @@ export const Atividades = () => {
         </ol>
       </div>
 
-      <div>
-        <nav className="menu-atv">
-          <ol>
-            <li>
-              <button className="btn extensao-button" type="button">
-                Extensão
-              </button>
-              <button className="btn ensino-button" type="button">
-                Ensino
-              </button>
-            </li>
-          </ol>
-        </nav>
-      </div>
+      <hr />
+
+      <Menu
+        item1="Extensão"
+        onclick1={() => {}}
+        item2="Ensino"
+        onclick2={() => {}}
+      />
 
       <div className="tabela">
         <table className="extensao-table">
