@@ -5,28 +5,22 @@ export const Container = styled.div`
     margin: 2% 1% 0 2%;
   }
 
-  .container-idoso,
+  hr {
+    border-top: 1px initial var(--border-color);
+    color: var(--border-color);
+  }
+
   ol {
     display: flex;
     align-items: center;
     list-style: none;
   }
 
-  .tabela{
-    display: flex;
-    justify-content: center;
-  }
-
-  hr {
-    border-top: 1px initial var(--border-color);
-    color: var(--border-color);
-  }
-
   .menu-atv ol {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 5% 0;
+    margin: 5% 4%;
   }
   .menu-atv .btn {
     background-color: transparent;
@@ -34,19 +28,18 @@ export const Container = styled.div`
     margin-right: 1em;
   }
 
-  .menu-atv .btn:hover {
-    font-size: 14px;
-    border-bottom: 2px solid var(--header-color);
+  .extensao-table {
+    text-align: center;
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0;
+    margin-bottom: 8%;
   }
 
   .th:not(:last-child),
   td:not(:last-child) {
     border-right: 1px solid var(--border-color);
     border-spacing: 0;
-  }
-
-  td {
-    padding: 2% 0;
   }
 
   tr > th,

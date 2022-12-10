@@ -5,11 +5,15 @@ export const Container = styled.div`
     margin: 2% 1% 0 2%;
   }
 
-  .container-idoso,
   ol {
     display: flex;
     align-items: center;
     list-style: none;
+  }
+
+  hr {
+    border-top: 1px initial var(--border-color);
+    color: var(--border-color);
   }
 
   .th:not(:last-child),
@@ -17,11 +21,9 @@ export const Container = styled.div`
     border-right: 1px solid var(--border-color);
     border-spacing: 0;
   }
-
   td {
     padding: 2% 0;
   }
-
   tr > th,
   tr > td {
     padding: 4% 0;
@@ -35,7 +37,6 @@ export const Container = styled.div`
     border: 1px solid var(--border-color);
     border-spacing: 0;
   }
-
   .documentos-table,
   .documento {
     text-align: left;
