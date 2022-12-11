@@ -1,6 +1,12 @@
+import { useParams } from "react-router-dom";
 import { Container } from "./styles";
 
 export const DadosPessoais = () => {
+  // pegar o id da url e retornar o aluno correspondente
+  // o aluno terá as informações
+
+  const { id = "" } = useParams<"id">();
+
   return (
     <Container>
       <div className="container-dados">

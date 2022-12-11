@@ -7,45 +7,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 export const Filtro = () => {
   const [item, setItem] = useState("");
 
-  const [listaDeCursos, setListaDeCursos] = useState<ICurso[]>([
-    {
-      id: "1",
-      title: "Musculação 1",
-      icon: "",
-      participantes: {
-        listaDeAlunos: [
-          {
-            id: "1",
-            name: "Adeilda",
-            cpf: "123.456.789-00",
-            url: "",
-          },
-          {
-            id: "2",
-            name: "Adeilda",
-            cpf: "123.456.789-00",
-            url: "",
-          },
-          {
-            id: "2",
-            name: "Adeilda",
-            cpf: "123.456.789-00",
-            url: "",
-          },
-        ],
-      },
-    },
-    {
-      id: "2",
-      title: "Musculação 2",
-      icon: "",
-    },
-    {
-      id: "3",
-      title: "Musculação 3",
-      icon: "",
-    },
-  ]);
+  const [listaDeCursos, setListaDeCursos] = useState<ICurso[]>([]);
 
   const handleChange = (event: SelectChangeEvent) => {
     setItem(event.target.value);

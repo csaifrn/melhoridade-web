@@ -10,7 +10,7 @@ export const BannerCurso = ({ curso }: Props) => {
   const navigate = useNavigate();
 
   return (
-    <Container onClick={() => navigate(`/curso/${curso.id}`)}>
+    <Container onClick={() => navigate(`/cursos/${curso.id}`)}>
       <div>
         <img src={curso.icon} />
       </div>

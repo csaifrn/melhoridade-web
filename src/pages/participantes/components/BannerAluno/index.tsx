@@ -10,7 +10,7 @@ export const BannerAluno = ({ aluno }: Props) => {
   const navigate = useNavigate();
 
   return (
-    <Container onClick={() => navigate(`/aluno/${aluno.id}`)}>
+    <Container onClick={() => navigate(`/alunos/${aluno.id}`)}>
       <div className="borda">
         <div>
           <img src={aluno.url} />

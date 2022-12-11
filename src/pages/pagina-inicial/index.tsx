@@ -1,51 +1,13 @@
-import { useState } from "react";
+import { Menu } from "../../shared/components/Menu";
 import { Pesquisa } from "../../shared/components";
 import { Container } from "../../shared/Container";
-import { ICurso } from "../../types/Curso";
 import { ListaDeCursos } from "./components/ListaDeCursos";
 import { Filtro } from "./components/Filtro";
-import { Menu } from "../../shared/components/Menu";
+import { useState } from "react";
+import { ICurso } from "../../types/Curso";
 
 export const Home = () => {
-  const [listaDeCursos, setListaDeCursos] = useState<ICurso[]>([
-    {
-      id: "1",
-      title: "Musculação 1",
-      icon: "",
-      participantes: {
-        listaDeAlunos: [
-          {
-            id: "1",
-            name: "Adeilda",
-            cpf: "123.456.789-00",
-            url: "",
-          },
-          {
-            id: "2",
-            name: "Adeilda",
-            cpf: "123.456.789-00",
-            url: "",
-          },
-          {
-            id: "2",
-            name: "Adeilda",
-            cpf: "123.456.789-00",
-            url: "",
-          },
-        ],
-      },
-    },
-    {
-      id: "2",
-      title: "Musculação 2",
-      icon: "",
-    },
-    {
-      id: "3",
-      title: "Musculação 3",
-      icon: "",
-    },
-  ]);
+  const [listaDeCursos, setlistaDeCursos] = useState<ICurso[]>([]);
 
   return (
     <>

@@ -21,7 +21,7 @@ export const Curso = () => {
           item1="Dados gerais"
           onclick1={() => {}}
           item2="Participantes"
-          onclick2={() => navigate(`/curso/${id}/participantes`)}
+          onclick2={() => navigate(`/cursos/${id}/participantes`)}
         />
         <hr />
         <Professor
