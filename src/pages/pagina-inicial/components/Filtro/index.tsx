@@ -21,6 +21,10 @@ export const Filtro = () => {
           onChange={handleChange}
           displayEmpty
           inputProps={{ "aria-label": "Without label" }}
+          sx={{height: 30,borderRadius:3,backgroundColor: "#161250", color: "white",
+           '.MuiSvgIcon-root ': {
+              fill: "white", 
+            } }}
         >
           <MenuItem value="">Filtro</MenuItem>
           {listaDeCursos.map((curso) => (
