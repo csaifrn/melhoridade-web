@@ -1,2 +1,3 @@
 export * from "./Header";
-export * from "./PesquisaInput";
+export * from "./Pesquisa";
+export * from "./SetaEsquerda";

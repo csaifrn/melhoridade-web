@@ -5,8 +5,8 @@ import { AppRoutes } from "./routes";
 const App = () => {
   return (
     <div className="container">
-      <Header />
       <BrowserRouter>
+        <Header />
         <AppRoutes />
       </BrowserRouter>
     </div>
