@@ -7,7 +7,7 @@ export const ListaDeAlunos = ({ listaDeAlunos }: IListaDeAlunos) => {
     <Container>
       <ul>
         {listaDeAlunos.map((aluno) => (
-          <BannerAluno key={aluno.id} aluno={aluno} />
+          <BannerAluno key={aluno.cpf} aluno={aluno} />
         ))}
       </ul>
     </Container>

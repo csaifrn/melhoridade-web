@@ -10,14 +10,14 @@ export const BannerAluno = ({ aluno }: Props) => {
   const navigate = useNavigate();
 
   return (
-    <Container onClick={() => navigate(`/alunos/${aluno.id}`)}>
+    <Container onClick={() => navigate(`/alunos/${aluno.nome}`)}>
       <div className="borda">
-        <div>
-          <img src={aluno.url} />
+        <div className="foto">
+          <img src={""} />
         </div>
         <div>
           <div className="dados">
-            <p>{aluno.name}</p>
+            <p>{aluno.nome}</p>
           </div>
           <div className="dados">
             <p>{aluno.cpf}</p>
