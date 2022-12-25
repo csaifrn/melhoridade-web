@@ -14,17 +14,17 @@ export const Header = () => {
     return(
         <>
             <Container>
-                <DrawerProvider>
-                    <Box>
-                        <IconButton onClick={toggleDrawerOpen}>
-                            <MenuRoundedIcon className='menu-icon' sx={{color: 'white'}}/>
-                        </IconButton>
-                    </Box>
-                </DrawerProvider>
             
                 <div className="home-icon" >
                     <img src="../images/commands/home.svg" alt="" onClick={() => navigate(`/home`)} />
                 </div>
+                <DrawerProvider>
+                    <Box className='menu-icon-box'>
+                        <IconButton onClick={toggleDrawerOpen}>
+                            <MenuRoundedIcon className='menu-icon' sx={{color: 'white'}} fontSize='large'/>
+                        </IconButton>
+                    </Box>
+                </DrawerProvider>
             </Container>
         </>
     )

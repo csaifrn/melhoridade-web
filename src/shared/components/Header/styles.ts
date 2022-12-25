@@ -18,13 +18,14 @@ export const Container = styled.div`
         background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
         border-radius: 10px;
         padding: 7px;
-        background-opacity: 40%
+        background-opacity: 40%;
+        margin-right:10px;
     }
     img{
         background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
         border-radius: 10px;
         padding: 7px;
-        background-opacity: 40%
+        background-opacity: 40%;
 
     }
 

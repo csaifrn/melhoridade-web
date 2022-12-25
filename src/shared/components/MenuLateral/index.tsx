@@ -42,8 +42,8 @@ export const MenuLateral: React.FC<children> = ({children}) => {
 
     return (
         <>
-        <Drawer open={isDrawerOpen} variant='temporary'  onClose={toggleDrawerOpen}>
-            <Box width={theme.spacing(28)}>
+        <Drawer anchor='right' open={isDrawerOpen} variant='temporary'  onClose={toggleDrawerOpen} >
+            <Box width={theme.spacing(28)} >
                 <Box width='100%' height={theme.spacing(20)} display="flex" alignItems='center' justifyContent='center' >
                 </Box>      
             </Box >      
