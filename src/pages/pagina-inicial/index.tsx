@@ -12,6 +12,7 @@ export const Home = () => {
   return (
     <>
       <Pesquisa />
+
       <Container>
         <ol className="menu-atv">
           <li>

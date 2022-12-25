@@ -10,16 +10,22 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    div{
-        max-width: 80px;
-        max-height: 80px;
+    .home-icon{
         margin: 20px;
+        cursor: pointer;
+    }
+    .menu-icon{
+        background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
+        border-radius: 10px;
+        padding: 7px;
+        background-opacity: 40%
     }
     img{
         background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
         border-radius: 10px;
         padding: 7px;
         background-opacity: 40%
+
     }
 
 `;
