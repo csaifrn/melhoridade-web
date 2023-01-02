@@ -9,14 +9,12 @@ const App = () => {
     <>
       <DrawerProvider>
         <BrowserRouter>
-
           <MenuLateral>
             <Header />
             <div className="container">
               <AppRoutes />
             </div>
           </MenuLateral>
-
         </BrowserRouter>
       </DrawerProvider>
     </>
