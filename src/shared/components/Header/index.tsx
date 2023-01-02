@@ -1,9 +1,9 @@
 import { Box, useMediaQuery, useTheme } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import { useNavigate } from 'react-router-dom';
-import { DrawerProvider, useDrawerContext } from '../MenuLateral/DrawerContext';
 import { MenuLateral } from '../MenuLateral';
 import { Container } from './styles'
+import { DrawerProvider, useDrawerContext } from '../MenuLateral/DrawerContext';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 
