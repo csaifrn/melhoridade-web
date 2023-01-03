@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useState } from "react";
-
+import {children} from "../../../types/Children"
 interface IDrawerOption {
   icon: string;
   path: string;
@@ -11,9 +11,6 @@ interface IDrawerContextData {
   toggleDrawerOpen: () => void;
   drawerOptions: IDrawerOption[];
   setDrawerOptions: (newDrawerOptions: IDrawerOption[]) => void;
-}
-interface children {
-  children: React.ReactNode;
 }
 
 const DrawerContext = createContext({} as IDrawerContextData);

@@ -4,19 +4,14 @@ import {
   Divider,
   Drawer,
   Icon,
-  List,
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  useMediaQuery,
   useTheme,
 } from "@mui/material";
 import { useMatch, useNavigate, useResolvedPath } from "react-router-dom";
 import { useDrawerContext } from "./DrawerContext";
-
-interface children {
-  children: React.ReactNode;
-}
+import {children} from "../../../types/Children"
 interface IListItemLinkProps {
   label: string;
   icon: string;
@@ -50,7 +45,6 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({
 
 export const MenuLateral: React.FC<children> = ({ children }) => {
   const theme = useTheme();
-  const smDown = useMediaQuery(theme.breakpoints.down("sm"));
   const { isDrawerOpen, toggleDrawerOpen, drawerOptions } = useDrawerContext();
 
   return (
@@ -68,7 +62,14 @@ export const MenuLateral: React.FC<children> = ({ children }) => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-          ></Box>
+          >
+            <Avatar
+              sx={{ height: theme.spacing(12), width: theme.spacing(12) }}
+              src=""
+            />
+          </Box>
+          <Divider></Divider>
+          
         </Box>
       </Drawer>
       <Box height="100vh">{children}</Box>
