@@ -4,6 +4,8 @@ import { Curso } from "../pages/curso";
 import { Participantes } from "../pages/participantes";
 import { PerfilAluno } from "../pages/perfil-aluno";
 import { useDrawerContext } from '../shared/components/MenuLateral';
+import { Login } from "../pages/login/index";
+import { Cadastro } from "../pages/cadastro";
 
 export const AppRoutes = () => {
 
@@ -21,6 +23,8 @@ export const AppRoutes = () => {
 
   return (
     <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/cadastro" element={<Cadastro />} />
       <Route path="/home" element={<Home />} />
       <Route path="/cursos/:id" element={<Curso />} />
       <Route path="/cursos/:id/participantes" element={<Participantes />} />

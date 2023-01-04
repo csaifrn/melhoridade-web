@@ -4,11 +4,14 @@ import {
   Divider,
   Drawer,
   Icon,
+  List,
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  useTheme,
+  useTheme, 
+  ListItem,
 } from "@mui/material";
+import PersonIcon from '@mui/icons-material/Person';
 import { useMatch, useNavigate, useResolvedPath } from "react-router-dom";
 import { useDrawerContext } from "./DrawerContext";
 import {children} from "../../../types/Children"
@@ -69,7 +72,16 @@ export const MenuLateral: React.FC<children> = ({ children }) => {
             />
           </Box>
           <Divider></Divider>
-          
+          <List>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <PersonIcon />
+              </ListItemIcon>
+              <ListItemText primary="Login" />
+            </ListItemButton>
+          </ListItem>
+        </List>
         </Box>
       </Drawer>
       <Box height="100vh">{children}</Box>
