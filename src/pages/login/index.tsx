@@ -2,9 +2,31 @@ import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
 import GoogleIcon from '@mui/icons-material/Google';
 import { Box, InputAdornment, TextField, useTheme, Typography, Button, Link   } from '@mui/material';
+import {getAuth, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+
+
 
 export const Login = () =>{
 
+    const auth = getAuth();
+    const navigate = useNavigate();
+    const [authing, setAuthing] = useState(false);
+
+    const signInWithGoogle = async () => {
+        setAuthing(true);
+
+        signInWithPopup(auth, new GoogleAuthProvider())
+        .then(response => {
+            console.log(response.user.uid);
+            navigate('/');
+        })
+        .catch((error) => {
+            console.log(error);
+            setAuthing(false);
+        });
+    }
     const theme = useTheme();
     return(
         <>
@@ -97,13 +119,15 @@ export const Login = () =>{
                 }}
                 >Ou faça login com
                 </Typography>
-                <GoogleIcon 
-                sx={{
-                    color:'white',
-                    backgroundColor:'#EA0000',
-                    borderRadius: theme.spacing(100),
-                    padding: theme.spacing(1),
-                }}/>
+                <Button onClick={(() => signInWithGoogle())} disabled={authing}>
+                    <GoogleIcon 
+                    sx={{
+                        color:'white',
+                        backgroundColor:'#EA0000',
+                        borderRadius: theme.spacing(100),
+                        padding: theme.spacing(1),
+                    }}/>
+                </Button>
                 <Typography
                 sx={{
                     marginTop:theme.spacing(20),

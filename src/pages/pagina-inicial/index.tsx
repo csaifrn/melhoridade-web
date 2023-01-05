@@ -5,10 +5,10 @@ import { ListaDeCursos } from "./components/ListaDeCursos";
 import { Filtro } from "./components/Filtro";
 import { useState } from "react";
 import { ICurso } from "../../types/Curso";
-
+import {getAuth, signOut} from 'firebase/auth';
 export const Home = () => {
   const [listaDeCursos, setlistaDeCursos] = useState<ICurso[]>([]);
-
+  const auth = getAuth();
   return (
     <>
       <Pesquisa />

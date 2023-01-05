@@ -3,18 +3,22 @@ import {
   Box,
   Divider,
   Drawer,
-  Icon,
+  SvgIcon,
   List,
   ListItemButton,
   ListItemIcon,
   ListItemText,
   useTheme, 
-  ListItem,
 } from "@mui/material";
-import PersonIcon from '@mui/icons-material/Person';
+import Icon from '@mui/material/Icon';
 import { useMatch, useNavigate, useResolvedPath } from "react-router-dom";
 import { useDrawerContext } from "./DrawerContext";
 import {children} from "../../../types/Children"
+import { getAuth, signOut } from "firebase/auth";
+
+
+
+
 interface IListItemLinkProps {
   label: string;
   icon: string;
@@ -29,17 +33,18 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({
   onClick,
 }) => {
   const navigate = useNavigate();
-
+  
   const handleClick = () => {
     navigate(to);
     onClick?.();
   };
   const resolvedPath = useResolvedPath(to);
+  
   const match = useMatch({ path: resolvedPath.pathname, end: false });
   return (
     <ListItemButton selected={!!match} onClick={handleClick}>
       <ListItemIcon>
-        <Icon>{icon}</Icon>
+      <Icon>{icon}</Icon>
       </ListItemIcon>
       <ListItemText primary={label} />
     </ListItemButton>
@@ -49,7 +54,12 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({
 export const MenuLateral: React.FC<children> = ({ children }) => {
   const theme = useTheme();
   const { isDrawerOpen, toggleDrawerOpen, drawerOptions } = useDrawerContext();
+  const auth = getAuth();
 
+  function signOutButton(){
+    signOut(auth);
+    toggleDrawerOpen();
+}
   return (
     <>
       <Drawer
@@ -58,7 +68,7 @@ export const MenuLateral: React.FC<children> = ({ children }) => {
         variant="temporary"
         onClose={toggleDrawerOpen}
       >
-        <Box width={theme.spacing(28)}>
+        <Box width={theme.spacing(28)} height="100%">
           <Box
             width="100%"
             height={theme.spacing(20)}
@@ -72,17 +82,28 @@ export const MenuLateral: React.FC<children> = ({ children }) => {
             />
           </Box>
           <Divider></Divider>
-          <List>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <PersonIcon />
-              </ListItemIcon>
-              <ListItemText primary="Login" />
-            </ListItemButton>
-          </ListItem>
-        </List>
+          <List component="nav">
+              {drawerOptions.map(drawerOption => (
+                <ListItemLink
+                  to={drawerOption.path}
+                  key={drawerOption.path}
+                  icon={drawerOption.icon}
+                  label={drawerOption.label}
+                  onClick={toggleDrawerOpen}
+                />
+              ))}
+            </List>
         </Box>
+        <Box>
+            <List component="nav">
+              <ListItemButton  onClick={signOutButton}>
+                <ListItemIcon >
+                  <Icon>logout</Icon>
+                </ListItemIcon>
+                <ListItemText primary="Sair" />
+              </ListItemButton>
+            </List>
+          </Box>
       </Drawer>
       <Box height="100vh">{children}</Box>
     </>
