@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import {getAuth, onAuthStateChanged} from 'firebase/auth'
 import { useNavigate } from 'react-router-dom';
 
-export interface IAuthRouteProps {
+export interface IAuthGoogleProps {
     children: React.ReactNode,
 };
 
-const AuthRoute: React.FunctionComponent<IAuthRouteProps> = props => {
+const AuthGoogle: React.FunctionComponent<IAuthGoogleProps> = props => {
     const {children} = props;
     const auth = getAuth();
     const navigate = useNavigate();
@@ -32,4 +32,4 @@ const AuthRoute: React.FunctionComponent<IAuthRouteProps> = props => {
     return <>{children}</>;
 }
 
-export default AuthRoute;
+export default AuthGoogle;

@@ -9,9 +9,9 @@ import { Cadastro } from "../pages/cadastro";
 import { useEffect } from "react";
 import {initializeApp} from 'firebase/app'
 import {config} from '../config/config'
-import AuthRoute from "../pages/login/components/AuthRoute";
+import AuthGoogle from "../pages/login/components/AuthGoogle";
 
-initializeApp(config.firebaseConfig);
+initializeApp(config.firebase);
 
 export const AppRoutes = () => {
 
@@ -41,7 +41,7 @@ export const AppRoutes = () => {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/cadastro" element={<Cadastro />} />
-      <Route path="/home" element={<AuthRoute><Home /> </AuthRoute>} />
+      <Route path="/home" element={<AuthGoogle><Home /> </AuthGoogle>} />
       <Route path="/cursos/:id" element={<Curso />} />
       <Route path="/cursos/:id/participantes" element={<Participantes />} />
       {/* <Route path="/alunos" element={<ListaAlunos />} /> */}

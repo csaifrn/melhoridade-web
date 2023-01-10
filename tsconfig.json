@@ -16,6 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "style.ts"],
+  "include": ["src", "style.ts", "src/pages/login/components/.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

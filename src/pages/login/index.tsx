@@ -2,9 +2,10 @@ import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
 import GoogleIcon from '@mui/icons-material/Google';
 import { Box, InputAdornment, TextField, useTheme, Typography, Button, Link   } from '@mui/material';
-import {getAuth, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
+import {getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup} from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import ErrorText from '../../shared/components/ErrorText';
 
 
 
@@ -27,6 +28,42 @@ export const Login = () =>{
             setAuthing(false);
         });
     }
+
+  
+    const [Authenticating, setAuthenticating] = useState<Boolean>(false);
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
+    const [error, setError] = useState<string>('');
+
+
+    const signIn = async () => {
+    
+    if(error !== '') setError('');
+
+    setAuthenticating(true);
+
+    await signInWithEmailAndPassword(auth, email, password)
+    .then(result => {
+        console.log(result)
+        navigate('/')
+      })
+      .catch(error => {
+        console.log(error)
+
+        if(error.code.includes('auth/wrong-password'))
+            {
+                setError('Senha Inválida')
+            }
+            else if('auth/user-not-found'){
+                setError('Email Invalido')
+            }
+            else{
+                setError('Impossivel fazer login. Tente novamente mais tarde')
+            }
+      })
+      setAuthenticating(false);
+    }
+    
     const theme = useTheme();
     return(
         <>
@@ -49,11 +86,12 @@ export const Login = () =>{
                 maxWidth={theme.spacing(50)}
                 
             >
-                CPF
+                Email
                     <TextField 
                     id="standard-basics" 
                     variant="standard"
-                    placeholder='Digite seu CPF'
+                    onChange={event => setEmail(event.target.value)}
+                    placeholder='Digite seu Email'
                     InputProps={{
                         startAdornment: (
                         <InputAdornment position="start" >
@@ -84,6 +122,7 @@ export const Login = () =>{
                     </InputAdornment>
                     ),
                 }} 
+                onChange={event => setPassword(event.target.value)}
                 />
             </Box>
             <Box
@@ -95,9 +134,10 @@ export const Login = () =>{
                 <Typography
                 >Esqueceu a senha?</Typography>
             </Box>
-
+            <ErrorText error={error} />
             <Button 
             variant="contained"
+            onClick={signIn}
             sx={{
                 marginTop: theme.spacing(3),
                 backgroundColor:'#161250',
