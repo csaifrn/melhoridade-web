@@ -14,7 +14,7 @@ import Icon from '@mui/material/Icon';
 import { useMatch, useNavigate, useResolvedPath } from "react-router-dom";
 import { useDrawerContext } from "./DrawerContext";
 import {children} from "../../../types/Children"
-import { getAuth, signOut } from "firebase/auth";
+import AuthGoogle from "../../../pages/login/components/AuthGoogle";
 
 
 
@@ -54,12 +54,12 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({
 export const MenuLateral: React.FC<children> = ({ children }) => {
   const theme = useTheme();
   const { isDrawerOpen, toggleDrawerOpen, drawerOptions } = useDrawerContext();
-  const auth = getAuth();
-
+  const {user, loading, logOut} = AuthGoogle()  
+  const photoURL = user?.photoURL;
   function signOutButton(){
-    signOut(auth);
-    toggleDrawerOpen();
-}
+    logOut()
+    toggleDrawerOpen()
+  }
   return (
     <>
       <Drawer
@@ -78,7 +78,7 @@ export const MenuLateral: React.FC<children> = ({ children }) => {
           >
             <Avatar
               sx={{ height: theme.spacing(12), width: theme.spacing(12) }}
-              src=""
+              src={photoURL}
             />
           </Box>
           <Divider></Divider>
@@ -111,3 +111,4 @@ export const MenuLateral: React.FC<children> = ({ children }) => {
 };
 
 export { useDrawerContext };
+

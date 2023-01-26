@@ -1,35 +1,49 @@
 import React, { useEffect, useState } from 'react';
-import {getAuth, onAuthStateChanged} from 'firebase/auth'
+import {getAuth, onAuthStateChanged, signOut, User} from 'firebase/auth'
 import { useNavigate } from 'react-router-dom';
+import {useDrawerContext } from '../../../shared/components/MenuLateral/DrawerContext';
 
-export interface IAuthGoogleProps {
-    children: React.ReactNode,
-};
+const AuthGoogle = () => {
 
-const AuthGoogle: React.FunctionComponent<IAuthGoogleProps> = props => {
-    const {children} = props;
     const auth = getAuth();
     const navigate = useNavigate();
+
+    const {toggleDrawerOpen} = useDrawerContext();
+    const [user, setUser] =  useState<User>();
     const [loading, setLoading] = useState(false);
     
     
-    useEffect(() => {
-        const AuthCheck = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setLoading(false);
-            } else {
-                console.log('unauthorized');
-                navigate('/login');
-            }
-        });
-
-        return () => AuthCheck();
-    }, [auth]);
-
-    if (loading) return <p>loading ...</p>
+        const handleLogout = () => {
+            signOut(auth).then(() => {
+                console.log("Logout")
+                navigate("/");
+            }).catch((error) => {
+                // An error happened.
+            });
+        }
 
     
-    return <>{children}</>;
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                console.log("user is logged in");
+                setUser(user);
+            } else {
+                console.log("user is not logged in");
+            }
+            setLoading(false);
+        });
+
+        return () => {
+            unsubscribe();
+        };
+    }, []);
+
+    return {
+        user: user,
+        loading: loading,
+        logOut: handleLogout,
+    }
 }
 
 export default AuthGoogle;

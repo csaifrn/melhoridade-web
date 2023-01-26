@@ -6,8 +6,8 @@ import {getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import ErrorText from '../../shared/components/ErrorText';
-
-
+import ForgotPasswordPage from './components/ForgotPassword';
+import { Cadastro } from '../cadastro';
 
 export const Login = () =>{
 
@@ -132,7 +132,7 @@ export const Login = () =>{
                 }}
                 >
                 <Typography
-                >Esqueceu a senha?</Typography>
+                ><Link href='./Forgot'underline="none" sx={{cursor:'pointer', color:'black'}}>Esqueceu a senha?</Link></Typography>
             </Box>
             <ErrorText error={error} />
             <Button 

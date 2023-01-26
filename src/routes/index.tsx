@@ -9,8 +9,9 @@ import { Cadastro } from "../pages/cadastro";
 import { useEffect } from "react";
 import {initializeApp} from 'firebase/app'
 import {config} from '../config/config'
-import AuthGoogle from "../pages/login/components/AuthGoogle";
-
+import AuthRoute from "../pages/login/components/AuthRoute";
+import ForgotPasswordPage from '../pages/login/components/ForgotPassword'
+import { ResetPassword } from "../pages/login/components/ResetPassword";
 initializeApp(config.firebase);
 
 export const AppRoutes = () => {
@@ -39,13 +40,14 @@ export const AppRoutes = () => {
 
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
+      <Route path="/Forgot" element={<ForgotPasswordPage/>} />
       <Route path="/cadastro" element={<Cadastro />} />
-      <Route path="/home" element={<AuthGoogle><Home /> </AuthGoogle>} />
-      <Route path="/cursos/:id" element={<Curso />} />
-      <Route path="/cursos/:id/participantes" element={<Participantes />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/home" element={<AuthRoute><Home /> </AuthRoute>} />
+      <Route path="/cursos/:id" element={<AuthRoute><Curso /></AuthRoute>} />
+      <Route path="/cursos/:id/participantes" element={<AuthRoute><Participantes /></AuthRoute>} />
       {/* <Route path="/alunos" element={<ListaAlunos />} /> */}
-      <Route path="/alunos/:id" element={<PerfilAluno />} />
+      <Route path="/alunos/:id" element={<AuthRoute><PerfilAluno /></AuthRoute>} />
       <Route path="*" element={<Navigate to={"/home"} />} />
     </Routes>
   );
