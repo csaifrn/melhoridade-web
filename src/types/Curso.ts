@@ -1,12 +1,17 @@
-import { ICronograma } from "./Cronograma";
-import { IListaDeAlunos } from "./ListaDeAlunos";
-import { IProfessor } from "./Professor";
+import { IPessoa } from "./Pessoa";
 
-export type ICurso = {
+export interface ICronograma {
+  dia: string;
+  hora: string;
+  sala: string;
+}
+
+export interface ICurso {
   id: string;
-  title: string;
-  icon: string;
-  professor?: IProfessor;
-  cronograma?: ICronograma;
-  participantes?: IListaDeAlunos;
-};
+  nome: string;
+  periodo: string;
+  tipo: string;
+  professor: string;
+  cronograma: ICronograma[];
+  participantes: IPessoa[];
+}
